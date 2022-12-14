@@ -1,0 +1,58 @@
+.flexContainer {
+  display: flex;
+  align-items: flex-end;
+}
+.inputContainer {
+  max-width: 300px;
+}
+.name {
+  height: 44px;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
+  width: 500px;
+  padding: 10px 30px 10px 15px;
+  font-size: 17px;
+  line-height: 22px;
+}
+.university {
+  display: block;
+  @extend .name;
+  width: 300px;
+  margin-bottom: 15px;
+  &:nth-last-child {
+    margin-bottom: 0;
+  }
+}
+.university {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin: 9px 15px;
+}
+.addButton {
+  background: transparent;
+  border: none;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+.deleteButton {
+  @extend .addButton;
+  margin-right: 15px;
+}
+.textButton {
+  font-size: 17px;
+  line-height: 22px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+.prompt {
+  margin-top: 9px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #9d9d9d;
+}

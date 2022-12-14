@@ -1,0 +1,10 @@
+<div class="main" (click)="dropdownOpen()">{{ selectVariable }}</div>
+<div class="content" *ngIf="contentDropDown">
+  <ul
+    *ngFor="let item of title; index as i"
+    (click)="changeOption(item)"
+    [className]="i === colorVariable ? option : null"
+  >
+    <li>{{ item.value }}</li>
+  </ul>
+</div>

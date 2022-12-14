@@ -1,0 +1,23 @@
+<div class="flexContainer">
+  <div class="inputContainer">
+    <ng-container *ngFor="let item of universityArray">
+      <input
+        [className]="option"
+        [placeholder]="placeholderOption"
+        [(ngModel)]="item.name"
+      />
+    </ng-container>
+  </div>
+  <div class="buttonContainer" *ngIf="addUniversityButton">
+    <button class="deleteButton" *ngIf="universityArray.length > 1">
+      <img src="assets/deleteButton.svg" alt="deleteButton" (click)="deleteInput()" />
+    </button>
+    <button class="addButton">
+      <img src="assets/addButton.svg" alt="addButton" (click)="addInput()" />
+    </button>
+    <span class="textButton" (click)="addInput()">Добавить еще</span>
+  </div>
+</div>
+<p class="prompt" *ngIf="addUniversityButton">
+  Укажите заведения, в которых вы учились.
+</p>
